@@ -1,26 +1,140 @@
-<h2>Create Stock Form</h2>
-<div class="form-group ">
-  <form (ngSubmit)="createStock(stockForm)" #stockForm="ngForm" >
-    <div ngModelGroup="stock">
-      <div class="stock-name">
-        <input type="text" placeholder="Stock Name" required name="name" ngModel>
-      </div>
-      <div class="stock-code">
-        <input type="text" placeholder="Stock Code" required minlength="2" name="code" ngModel>
-      </div>
-      <div class="stock-price">
-        <input type="number" placeholder="Stock Price" name="price" required ngModel>
-      </div>
-      <div class="stock-exchange">
-        <div>
-          <select name="exchange" ngModel>
-            <option *ngFor="let exchange of exchanges" [ngValue]="exchange">{{exchange}}</option>
-          </select>
-        </div>
-      </div>
+<h2>Athlete Form</h2>
+
+<form (ngSubmit)="createAthlete(athleteForm)" #athleteForm="ngForm" class="form-horizontal" >
+  <div ngModelGroup="athlete">
+    <div class="athleteInfo form-group">
+      <label id="firstNameLabel" class="col-md-1 control-label">First Name:</label>
+      <input type="text" class="col-md-3" placeholder="First Name..." required name="firstName" ngModel>
+
+      <label id="lastNameLabel" class="col-md-1 control-label">Last Name:</label>
+      <input type="text" class="col-md-3" placeholder="Last Name..." required name="lastName" ngModel>
     </div>
-    <button type="submit">Create</button>
-  </form>
-</div>
-<h4>Stock Name is {{stock | json}}</h4>
-<h4>Data has been confirmed: {{confirmed}}</h4>
+    <div class="athleteInfo form-group">
+      <label id="address" class="col-md-1 control-label">Address:</label>
+      <input type="text" class="col-md-6" placeholder="Address..." required name="address" ngModel>
+    </div>
+    <div class="athleteInfo form-group">
+      <label id="cell" class="col-md-1 control-label">Cell:</label>
+      <input type="text" placeholder="Cell Number..." required name="cell" ngModel>
+      <label id="officeNumber" class="col-md-1 control-label">Tel. Office:</label>
+      <input type="text" placeholder="Office Number..." required name="officeNumber" ngModel>
+    </div>
+    <div class="athleteInfo form-group">
+      <label id="email" class="col-md-1 control-label">Email:</label>
+      <input type="text" placeholder="Email..." required name="email" ngModel>
+      <label id="age" class="col-md-1 control-label">Age:</label>
+      <input type="Number" class="col-md-1 control-label" placeholder="Age..." required name="age" ngModel>
+      <label id="sexLabel" class="col-md-1 control-label">Sex:</label>
+      <label class="radio-inline" class="col-md-1 control-label">
+        <input type="radio" name="sexOptions" id="inlineSexRadio1" value="Female"> Female
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="sexOptions" id="inlineSexRadio2" value="Male"> Male
+      </label>
+    </div>
+
+    <div class="athleteInfo form-group col-md-offset-4">
+      <label id="space1" class="col-md-2 control-label"></label>
+      <button type="button" class="btn btn-primary btn-lg ">Add Athlete</button>
+    </div>
+  </div>
+</form>
+
+
+<form (ngSubmit)="createHealthSurvey(healthForm)" #healthForm="ngForm" class="form-horizontal" >
+  <div ngModelGroup="healthSurvey">
+    <table class="table table-striped">
+      <tr><th >Health Condition</th><th >Y/N</th><th>Description</th></tr>
+      <tr class="healthInfo form-group">
+        <td >
+          <label id="question1" class="col-md-2" >Asthma</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline col-md-1" >
+              <input type="radio" name="yes1" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline col-md-1">
+              <input type="radio" name="not1" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer1" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+      <tr class="healthInfo form-group">
+        <td>
+          <label id="question2" >Liver Problems</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline" >
+              <input type="radio" name="yes1" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline">
+              <input type="radio" name="not1" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer2" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+      <tr class="healthInfo form-group">
+        <td>
+          <label id="question3" >Kidney Problems</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline" >
+              <input type="radio" name="yes1" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline">
+              <input type="radio" name="not1" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer3" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+      <tr class="healthInfo form-group">
+        <td>
+          <label id="question4" >Heart Problems</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline" >
+              <input type="radio" name="yes1" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline">
+              <input type="radio" name="not1" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer4" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+
+
+    </table>
+    <div class="healthInfo form-group col-md-offset-4">
+      <label id="space2" class="col-md-2 control-label"></label>
+      <button type="button" class="btn btn-primary btn-lg ">Get Program Plan</button>
+    </div>
+  </div>
+</form>
