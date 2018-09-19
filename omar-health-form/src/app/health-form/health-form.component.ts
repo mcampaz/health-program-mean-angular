@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router'
+import { Form } from '@angular/forms'
 
 @Component({
   selector: 'app-health-form',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HealthFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {}
+  createHealthSurvey( ){
+    this.router.navigate(['health-program1']);
+  }
+  createAthlete(){
+    this.router.navigate(['health-program1']);
+  }
 
   ngOnInit() {
   }

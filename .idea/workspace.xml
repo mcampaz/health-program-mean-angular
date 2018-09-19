@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ac8573c9-a286-401e-af2c-aa3c81bc2c35" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/omar-health-form/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/omar-health-form/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/omar-health-form/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/omar-health-form/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/omar-health-form/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/omar-health-form/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/omar-health-form/src/app/health-form/health-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/omar-health-form/src/app/health-form/health-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/omar-health-form/src/app/health-program1/health-program1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/omar-health-form/src/app/health-program1/health-program1.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/omar-health-form/src/app/health-program2/health-program2.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/omar-health-form/src/app/health-program2/health-program2.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/omar-health-form/src/app/health-program3/health-program3.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/omar-health-form/src/app/health-program3/health-program3.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/omar-health-form/src/app/health-program4/health-program4.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/omar-health-form/src/app/health-program4/health-program4.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/omar-health-form/src/app/health-form/health-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/omar-health-form/src/app/health-form/health-form.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,8 +21,8 @@
       <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/omar-health-form/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+            <state relative-caret-position="310">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -36,13 +30,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/omar-health-form/src/app/app.module.ts">
+      <file leaf-file-name="health-form.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/omar-health-form/src/app/health-form/health-form.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="22" column="16" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="16" />
+            <state relative-caret-position="1519">
+              <caret line="136" column="25" selection-start-line="136" selection-start-column="25" selection-end-line="136" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="health-form.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/omar-health-form/src/app/health-form/health-form.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
               <folding>
-                <element signature="e#0#58#0" expanded="true" />
+                <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,12 +60,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/omar-health-form/.gitignore" />
-        <option value="$PROJECT_DIR$/omar-health-form/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/omar-health-form/src/app/health-form/health-form.component.html" />
         <option value="$PROJECT_DIR$/omar-health-form/src/app/health-program1/health-program1.component.html" />
         <option value="$PROJECT_DIR$/omar-health-form/src/app/health-program4/health-program4.component.html" />
         <option value="$PROJECT_DIR$/omar-health-form/src/app/health-program3/health-program3.component.html" />
         <option value="$PROJECT_DIR$/omar-health-form/src/app/health-program2/health-program2.component.html" />
+        <option value="$PROJECT_DIR$/omar-health-form/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/omar-health-form/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/omar-health-form/src/app/health-form/health-form.component.ts" />
+        <option value="$PROJECT_DIR$/omar-health-form/src/app/health-form/health-form.component.html" />
       </list>
     </option>
   </component>
@@ -198,19 +203,19 @@
       <option name="presentableId" value="Default" />
       <updated>1537196892098</updated>
       <workItem from="1537196902523" duration="26280000" />
-      <workItem from="1537377650943" duration="1578000" />
+      <workItem from="1537377650943" duration="3881000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27858000" />
+    <option name="totallyTimeSpent" value="30161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1216" height="1896" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -425,20 +430,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/omar-health-form/src/app/health-form/health-form.component.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omar-health-form/src/app/health-form/health-form.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1514">
-          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/omar-health-form/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        <state relative-caret-position="310">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
@@ -447,11 +442,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/omar-health-form/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="16" />
+        <state relative-caret-position="434">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="28" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omar-health-form/src/app/health-form/health-form.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omar-health-form/src/app/health-form/health-form.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1519">
+          <caret line="136" column="25" selection-start-line="136" selection-start-column="25" selection-end-line="136" selection-end-column="25" />
         </state>
       </provider>
     </entry>

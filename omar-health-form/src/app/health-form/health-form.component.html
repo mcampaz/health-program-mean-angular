@@ -1,6 +1,6 @@
 <h2>Athlete Form</h2>
 
-<form (ngSubmit)="createAthlete(athleteForm)" #athleteForm="ngForm" class="form-horizontal" >
+<form (ngSubmit)="createAthlete()" #athleteForm="ngForm" class="form-horizontal" >
   <div ngModelGroup="athlete">
     <div class="athleteInfo form-group">
       <label id="firstNameLabel" class="col-md-1 control-label">First Name:</label>
@@ -35,13 +35,13 @@
 
     <div class="athleteInfo form-group col-md-offset-4">
       <label id="space1" class="col-md-2 control-label"></label>
-      <button type="button" class="btn btn-primary btn-lg ">Add Athlete</button>
+      <button type="input" class="btn btn-primary btn-lg ">Add Athlete</button>
     </div>
   </div>
 </form>
 
 
-<form (ngSubmit)="createHealthSurvey(healthForm)" #healthForm="ngForm" class="form-horizontal" >
+<form (ngSubmit)="createHealthSurvey()" #healthForm="ngForm" class="form-horizontal" >
   <div ngModelGroup="healthSurvey">
     <table class="table table-striped">
       <tr><th >Health Condition</th><th >Y/N</th><th>Description</th></tr>
@@ -134,7 +134,7 @@
     </table>
     <div class="healthInfo form-group col-md-offset-4">
       <label id="space2" class="col-md-2 control-label"></label>
-      <button type="button" class="btn btn-primary btn-lg ">Get Program Plan</button>
+      <button type="input" class="btn btn-primary btn-lg ">Get Program Plan</button>
     </div>
   </div>
 </form>
