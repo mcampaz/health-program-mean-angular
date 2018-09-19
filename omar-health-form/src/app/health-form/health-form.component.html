@@ -1,6 +1,6 @@
 <h2>Athlete Form</h2>
 
-<form (ngSubmit)="createAthlete()" #athleteForm="ngForm" class="form-horizontal" >
+<form (ngSubmit)="createAthlete(athleteForm)" #athleteForm="ngForm" class="form-horizontal" >
   <div ngModelGroup="athlete">
     <div class="athleteInfo form-group">
       <label id="firstNameLabel" class="col-md-1 control-label">First Name:</label>
@@ -41,7 +41,7 @@
 </form>
 
 
-<form (ngSubmit)="createHealthSurvey()" #healthForm="ngForm" class="form-horizontal" >
+<form (ngSubmit)="createHealthSurvey(healthForm)" #healthForm="ngForm" class="form-horizontal" >
   <div ngModelGroup="healthSurvey">
     <table class="table table-striped">
       <tr><th >Health Condition</th><th >Y/N</th><th>Description</th></tr>
@@ -73,12 +73,12 @@
         <td>
           <div>
             <label class="radio-inline" >
-              <input type="radio" name="yes1" value="Yes"> Yes
+              <input type="radio" name="yes2" value="Yes"> Yes
             </label>
           </div>
           <div>
             <label class="radio-inline">
-              <input type="radio" name="not1" value="No"> No
+              <input type="radio" name="not2" value="No"> No
             </label>
           </div>
         </td>
@@ -94,12 +94,12 @@
         <td>
           <div>
             <label class="radio-inline" >
-              <input type="radio" name="yes1" value="Yes"> Yes
+              <input type="radio" name="yes3" value="Yes"> Yes
             </label>
           </div>
           <div>
             <label class="radio-inline">
-              <input type="radio" name="not1" value="No"> No
+              <input type="radio" name="not3" value="No"> No
             </label>
           </div>
         </td>
@@ -115,12 +115,12 @@
         <td>
           <div>
             <label class="radio-inline" >
-              <input type="radio" name="yes1" value="Yes"> Yes
+              <input type="radio" name="yes4" value="Yes"> Yes
             </label>
           </div>
           <div>
             <label class="radio-inline">
-              <input type="radio" name="not1" value="No"> No
+              <input type="radio" name="not4" value="No"> No
             </label>
           </div>
         </td>
