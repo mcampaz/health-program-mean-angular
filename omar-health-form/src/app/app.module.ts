@@ -9,9 +9,11 @@ import { HealthProgram2Component } from './health-program2/health-program2.compo
 import { HealthProgram3Component } from './health-program3/health-program3.component';
 import { HealthProgram4Component } from './health-program4/health-program4.component';
 import { HealthFormComponent } from './health-form/health-form.component';
+import { SurveyFormComponent } from './survey-form/survey-form.component';
 
 const routes = [
     { path: '', component: HealthFormComponent },
+    { path: 'survey-form', component: SurveyFormComponent },
     { path: 'health-program1', component: HealthProgram1Component },
     { path: 'health-program2', component: HealthProgram2Component },
     { path: 'health-program3', component: HealthProgram3Component },
@@ -25,7 +27,8 @@ const routes = [
     HealthProgram2Component,
     HealthProgram3Component,
     HealthProgram4Component,
-    HealthFormComponent
+    HealthFormComponent,
+    SurveyFormComponent
   ],
   imports: [
     BrowserModule,

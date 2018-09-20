@@ -1,0 +1,308 @@
+
+<form (ngSubmit)="createHealthSurvey(healthForm)" #healthForm="ngForm" class="form-horizontal" >
+  <div ngModelGroup="healthSurvey">
+    <table class="table table-striped">
+      <tr><th >Health Condition</th><th >Y/N</th><th>Description</th></tr>
+      <tr class="healthInfo form-group">
+        <td >
+          <label id="question1" class="col-md-2" >Asthma</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline col-md-1" >
+              <input type="radio" name="yes1" value="True"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline col-md-1">
+              <input type="radio" name="not1" value="False"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer1" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+      <tr class="healthInfo form-group">
+        <td>
+          <label id="question2" >Liver Problems</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline" >
+              <input type="radio" name="yes2" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline">
+              <input type="radio" name="not2" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer2" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+      <tr class="healthInfo form-group">
+        <td>
+          <label id="question3" >Kidney Problems</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline" >
+              <input type="radio" name="yes3" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline">
+              <input type="radio" name="not3" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer3" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+      <tr class="healthInfo form-group">
+        <td>
+          <label id="question4" >Heart Problems</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline" >
+              <input type="radio" name="yes4" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline">
+              <input type="radio" name="not4" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer4" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+      <tr class="healthInfo form-group">
+        <td>
+          <label id="question5" >Heart Problems</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline" >
+              <input type="radio" name="yes5" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline">
+              <input type="radio" name="not5" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer5" class="form-control col-md-8" placeholder="Please Describe..." issueDescription5="answer5" ngModel>
+          </textarea>
+        </td>
+      </tr>
+      <tr class="healthInfo form-group">
+        <td>
+          <label id="question4" >Heart Problems</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline" >
+              <input type="radio" name="yes4" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline">
+              <input type="radio" name="not4" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer4" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+      <tr class="healthInfo form-group">
+        <td>
+          <label id="question4" >Heart Problems</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline" >
+              <input type="radio" name="yes4" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline">
+              <input type="radio" name="not4" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer4" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+      <tr class="healthInfo form-group">
+        <td>
+          <label id="question4" >Heart Problems</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline" >
+              <input type="radio" name="yes4" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline">
+              <input type="radio" name="not4" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer4" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+      <tr class="healthInfo form-group">
+        <td>
+          <label id="question4" >Heart Problems</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline" >
+              <input type="radio" name="yes4" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline">
+              <input type="radio" name="not4" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer4" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+      <tr class="healthInfo form-group">
+        <td>
+          <label id="question4" >Heart Problems</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline" >
+              <input type="radio" name="yes4" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline">
+              <input type="radio" name="not4" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer4" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+      <tr class="healthInfo form-group">
+        <td>
+          <label id="question4" >Heart Problems</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline" >
+              <input type="radio" name="yes4" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline">
+              <input type="radio" name="not4" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer4" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+      <tr class="healthInfo form-group">
+        <td>
+          <label id="question4" >Heart Problems</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline" >
+              <input type="radio" name="yes4" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline">
+              <input type="radio" name="not4" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer4" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+      <tr class="healthInfo form-group">
+        <td>
+          <label id="question4" >Heart Problems</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline" >
+              <input type="radio" name="yes4" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline">
+              <input type="radio" name="not4" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer4" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+      <tr class="healthInfo form-group">
+        <td>
+          <label id="question4" >Heart Problems</label>
+        </td>
+        <td>
+          <div>
+            <label class="radio-inline" >
+              <input type="radio" name="yes4" value="Yes"> Yes
+            </label>
+          </div>
+          <div>
+            <label class="radio-inline">
+              <input type="radio" name="not4" value="No"> No
+            </label>
+          </div>
+        </td>
+        <td>
+          <textarea id="answer4" class="form-control col-md-8" placeholder="Please Describe..." required name="firstName" ngModel>
+          </textarea>
+        </td>
+      </tr>
+
+
+    </table>
+    <div class="healthInfo form-group col-md-offset-4">
+      <label id="space2" class="col-md-2 control-label"></label>
+      <button type="input" class="btn btn-primary btn-lg ">Get Program Plan</button>
+    </div>
+  </div>
+</form>
