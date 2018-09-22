@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router'
-import { Form } from '@angular/forms'
+import { Router } from '@angular/router'
+import {Form, FormGroup, NgForm} from '@angular/forms'
 import {forEach} from "@angular/router/src/utils/collection";
+import {Athlete} from "../../models/athlete";
 
 @Component({
   selector: 'app-health-form',
@@ -9,25 +10,28 @@ import {forEach} from "@angular/router/src/utils/collection";
   styleUrls: ['./health-form.component.css']
 })
 export class HealthFormComponent implements OnInit {
+  public  athlete;
+  genders = ['female', 'male', 'other'];
+  constructor(private router: Router) {
 
-  constructor(private router: Router) {}
-  createHealthSurvey(healthForm){
-    debugger;
-    console.log(healthForm);
-    let myNumber = 3;
-    switch (myNumber) {
-      case 1:
-        this.router.navigate(['health-program1']);
-      case 2:
-        this.router.navigate(['health-program2']);
-      case 3:
-        this.router.navigate(['health-program3']);
-      default:
-        this.router.navigate(['health-program4']);
-    }
   }
-  createAthlete(){
 
+  createAthlete(athleteForm: NgForm){
+    debugger;
+    this.mapFormValues(athleteForm);
+  }
+
+  mapFormValues(form: NgForm){
+    // this.athlete = new Athlete(
+    //   form.controls['firstName'].value,
+    //   form.controls['lastName'].value,
+    //   form.controls['athleteAge'].value,
+    //   form.controls['athleteSex'].value);
+    // this.athlete.officeNumber = form.controls['officeNumber'].value;
+    // this.athlete.athleteEmail = form.controls['athleteEmail'].value;
+    // this.athlete.athleteAge = form.controls['address'].value;
+    // this.athlete.athleteSex = form.controls['cellNumber'].value);
+    this.router.navigate(['athlete-result']);
   }
 
   ngOnInit() {

@@ -1,18 +1,23 @@
 export class Athlete {
-  private healthProgram = null;
+  private _healthProgram = null;
+  public id?: number;
+  public address?: string;
+  public cellNumber?: string;
+  public officeNumber?: string;
+  public athleteEmail?: string;
 
   constructor(
     public firstName: string,
     public lastName: string,
-    public address: string,
-    public cellNumber: string,
-    public officeNumber: string,
-    public email: string,
-    public age: number,
-    public sex: string
-    ){
+    public athleteAge: number,
+    public gender: string
+    ){}
+
+  set healthProgram(value){
+    this._healthProgram = value;
   }
-  setHealthProgram(value){
-    this.healthProgram = value;
+
+  get healthProgram(): any {
+    return this._healthProgram;
   }
 }

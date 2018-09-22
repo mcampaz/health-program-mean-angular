@@ -1,42 +1,140 @@
-<h2>Athlete Form</h2>
-
-<form (ngSubmit)="createAthlete(athleteForm)" #athleteForm="ngForm" class="vertical-horizontal" name="createAthlete">
+<div class="col-md-4 col-offset-4">
+<h2 id="athleteFormTitle">Athlete Form</h2>
+</div>
+<form
+  (ngSubmit)="createAthlete(athleteForm)"
+  #athleteForm="ngForm"
+  class="vertical-horizontal"
+  name="createAthlete"
+  id="createAthlete"
+>
   <div ngModelGroup="athlete">
     <div class="athleteInfo form-group">
-      <label id="firstNameLabel" class="col-md-1 control-label float-left">First Name:</label>
-      <input type="text" class="col-md-3" placeholder="First Name..." required name="firstName" [(ngModel)]="models.Athlete">
-
-      <label id="lastNameLabel" class="col-md-1 control-label">Last Name:</label>
-      <input type="text" class="col-md-3" placeholder="Last Name..." required name="lastName" ngModel>
-    </div>
-    <div class="athleteInfo form-group">
-      <label id="address" class="col-md-1 control-label">Address:</label>
-      <input type="text" class="col-md-6" placeholder="Address..." required name="address" ngModel>
-    </div>
-    <div class="athleteInfo form-group">
-      <label id="cell" class="col-md-1 control-label">Cell:</label>
-      <input type="text" placeholder="Cell Number..." required name="cell" ngModel>
-      <label id="officeNumber" class="col-md-1 control-label">Tel. Office:</label>
-      <input type="text" placeholder="Office Number..." required name="officeNumber" ngModel>
-    </div>
-    <div class="athleteInfo form-group">
-      <label id="email" class="col-md-1 control-label">Email:</label>
-      <input type="text" placeholder="Email..." required name="email" ngModel>
-      <label id="age" class="col-md-1 control-label">Age:</label>
-      <input type="Number" class="col-md-1 control-label" placeholder="Age..." required name="age" ngModel>
-      <label id="sexLabel" class="col-md-1 control-label">Sex:</label>
-      <label class="radio-inline" class="col-md-1 control-label">
-        <input type="radio" name="sexOptions" id="inlineSexRadio1" value="Female"> Female
+      <label id="firstNameLabel" class="col col-md-1 control-label">
+        First Name:
       </label>
-      <label class="radio-inline">
-        <input type="radio" name="sexOptions" id="inlineSexRadio2" value="Male"> Male
+      <input
+        type="text"
+        class="col col-md-3"
+        placeholder="First Name..."
+        required name="firstName"
+        ngModel
+        #firstName="ngModel"
+      >
+      <span class="hlp-block alert alert-danger"
+            *ngIf="!firstName.valid && firstName.touched">
+        Please, enter a first name!
+      </span>
+      <label id="lastNameLabel" class="col-md-1 control-label">
+        Last Name:
       </label>
+      <input
+        type="text"
+        class="col col-md-3"
+        placeholder="Last Name..."
+        required name="lastName"
+        ngModel
+        #lastName="ngModel"
+      >
+      <span class="hlp-block alert alert-danger"
+            *ngIf="!lastName.valid && lastName.touched">
+        Please, enter a last name!
+      </span>
+    </div>
+    <div class="athleteInfo form-group">
+      <label id="address" class="col-md-1 control-label">
+        Address:
+      </label>
+      <input
+        type="text"
+        class="col-md-6"
+        placeholder="Address..."
+        name="address"
+        ngModel
+      >
+    </div>
+    <div class="athleteInfo form-group">
+      <label id="cell" class="col-md-1 control-label">
+        Cell Phone:
+      </label>
+      <input
+        type="text"
+        placeholder="Cell Number..."
+        name="cellNumber"
+        ngModel
+      >
+      <label id="officeNumber" class="col-md-1 control-label">
+        Office Phone:
+      </label>
+      <input
+        type="text"
+        placeholder="Office Number..."
+        name="officeNumber"
+        ngModel
+      >
+    </div>
+    <div class="athleteInfo form-group">
+      <label id="email" class="col-md-1 control-label">
+        Email:
+      </label>
+      <input
+        type="text"
+        placeholder="Enter your email..."
+        required email name="athleteEmail"
+        ngModel
+        #email="ngModel"
+      >
+      <span class="hlp-block alert alert-danger"
+            *ngIf="!email.valid && email.touched">
+        Please, enter a valid email!
+      </span>
+      <label id="age" class="col-md-1 control-label">
+        Age:
+      </label>
+      <input
+        type="Number"
+        class="col-md-1"
+        placeholder="Age..."
+        required name="athleteAge"
+        ngModel
+        #athleteAge="ngModel"
+      >
+      <span class="hlp-block alert alert-danger"
+            *ngIf="!athleteAge.valid && athleteAge.touched && athleteAge.value>0">
+        Please, enter a valid age!
+      </span>
+    </div>
+      <div class="athleteInfo form-group">
+        <label id="sex" class="col col-md-2 control-label">
+          Sex:
+        </label>
+        <div class="radio"
+               *ngFor="let gender of genders">
+          <label>
+            <input
+              type="radio"
+              required name="gender"
+              value="gender"
+              ngModel
+              [value]="gender"
+            >
+          {{ gender }}
+          </label>
+        </div>
+      </div>
     </div>
 
-    <div class="athleteInfo form-group col-md-offset-4">
-      <label id="space1" class="col-md-2 control-label"></label>
-      <button type="input" class="btn btn-primary btn-lg ">Add Athlete</button>
+    <div class="athleteInfo form-group col col-md-offset-4">
+      <label id="space1" class="col col-md-2 control-label">
+      </label>
+      <button
+        type="submit"
+        class="btn btn-primary btn-lg"
+        [disabled]="!athleteForm.valid"
+      >
+        Add Athlete
+      </button>
     </div>
-  </div>
+
 </form>
 

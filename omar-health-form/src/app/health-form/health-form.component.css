@@ -1,0 +1,12 @@
+#createAthlete{
+  margin: 25px;
+  padding: 25px;
+}
+
+#athleteForm{
+  text-align: center;
+}
+
+input.ng-invalid.ng-touched{
+  border: 2px solid darkred;
+}
