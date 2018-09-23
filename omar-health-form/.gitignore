@@ -6,8 +6,9 @@
 /out-tsc
 
 # dependencies
-/node_modules
-../omar-health-backend/node_modules
+/node_modules/
+../omar-health-backend/node_modules/
+/omar-health-backend/node_modules/
 
 # IDEs and editors
 /.idea
