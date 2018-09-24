@@ -18,8 +18,11 @@ db.on('error', console.error.bind(console, 'connection error:'))
 db.once('open', console.error.bind(console, 'connected to mongodb'))
 
 app.use(cors())
-app.use(compression())
+
 app.use(bodyParser.json())
+
+
+app.use(compression())
 
 app.use('/api', api)
 
