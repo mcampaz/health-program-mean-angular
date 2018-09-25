@@ -1,5 +1,6 @@
 'use strict'
 
 module.exports = {
-    athletes: require('./athletes')
+    athletes: require('./athletes'),
+    healthPrograms: require('./healthPrograms')
 }

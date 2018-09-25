@@ -22,7 +22,7 @@ app.use(cors())
 app.use(bodyParser.json())
 
 
-app.use(compression())
+// app.use(compression())
 
 app.use('/api', api)
 

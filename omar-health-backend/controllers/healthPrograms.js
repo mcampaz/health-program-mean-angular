@@ -1,19 +1,19 @@
 'use strict'
 
-const Athlete = require('app/models/athlete')
+const HealthProgram = require('app/models/HealthProgram')
 
-exports.athleteId = function(req, res, next, param){
-    Athlete
+exports.healthProgramId = function(req, res, next, param){
+    HealthProgram
         .findById(parm)
-        .then(function(athlete) {
-            re.athlete = athlete
+        .then(function(healthProgram) {
+            re.healthProgram = healthProgram
             next()
         })
         .catch(next)
 }
 
 exports.get = function(req, res, next){
-    if(req.athlete) return res.send(req.athlete)
+    if(req.healthProgram) return res.send(req.healthProgram)
 
     res.sendStatus(404)
 }
@@ -22,18 +22,18 @@ exports.list = function(req, res, next){
     const sort = req.query.sort || null
     const fields = req.query.fields || null
 
-    let query = Athlete.find()
+    let query = HealthProgram.find()
     
     if(sort !== null){
         query.sort(sort.replace(',', ' '))
     }
 
     if(fields !== null){
-        query.select(Athlete.reduceFields(fields))
+        query.select(HealthProgram.reduceFields(fields))
     }
     query
-        .then(function (athletes){
-            res.send(athletes)
+        .then(function (healthPrograms){
+            res.send(healthPrograms)
         })
         .catch(next)
 }
@@ -42,10 +42,10 @@ exports.list = function(req, res, next){
 exports.new = function(req, res, next){
     const date = req.body
 
-    const newAthlete = new Athlete(data)
-    newAthlete
+    const newHealthProgram = new HealthProgram(data)
+    newHealthProgram
         .save()
-        .then(function(athlete){
+        .then(function(healthProgram){
             res.send()
         }) 
         .catch(next)
@@ -54,14 +54,14 @@ exports.new = function(req, res, next){
 
 
 exports.update = function(req, res, next){
-    if(!req.athlete) return res.sendStatus(404)
+    if(!req.healthProgram) return res.sendStatus(404)
 
     const data = req.body
 
-    req.athlete
+    req.healthProgram
         .set(data)
         .save()
-        .then(function (athlete){
+        .then(function (healthProgram){
             res.send({})
         })
         .catch(next)
@@ -69,9 +69,9 @@ exports.update = function(req, res, next){
 
 
 exports.delete = function(req, res, next){
-    if (!req.athlete) return res.sendStatus(404)
+    if (!req.healthProgram) return res.sendStatus(404)
 
-    req.athlete
+    req.healthProgram
         .remove()
         .then(function(){
             res.sendStatus(200)
