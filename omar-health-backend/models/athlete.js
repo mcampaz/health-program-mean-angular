@@ -6,7 +6,7 @@ const ObjectId = Schema.ObjectId
 const RESTRICTED = new Set(['email'])
 
 /**
- * Athelete Schema
+ * Athlete Schema
  */
 
  const AthleteSchema = new Schema({
@@ -29,14 +29,6 @@ const RESTRICTED = new Set(['email'])
         default: Date.now
      },
      officeNumber: String,
-     createdOn: {
-        type: Date,
-        default: Date.now
-     },
-     updatedOn: {
-        type: Date,
-        default: Date.now
-     },
      email:  {
         type: String,
         select: false
@@ -65,12 +57,12 @@ const RESTRICTED = new Set(['email'])
 
  // Convert from 'firstName, ladtName' to
  // { firstNam: 1, lastName: 1}
-/*  AthleteSchema.statistics.reducedFields = function(fields){
+  AthleteSchema.statics.reduceFields = function(fields){
      return fields.split(',').reduce((memo, field)=>{
          if(RESTRICTED.has(field)) return memo
          memo[field] = 1
          return memo
         },{})
- } */
+ }
 
  module.exports = mongoose.model('Athlete', AthleteSchema, 'athletes')

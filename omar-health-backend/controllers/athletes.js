@@ -4,9 +4,9 @@ const Athlete = require('app/models/athlete')
 
 exports.athleteId = function(req, res, next, param){
     Athlete
-        .findById(parm)
+        .findById(param)
         .then(function(athlete) {
-            re.athlete = athlete
+            req.athlete = athlete
             next()
         })
         .catch(next)
@@ -38,20 +38,18 @@ exports.list = function(req, res, next){
         .catch(next)
 }
 
-
 exports.new = function(req, res, next){
-    const date = req.body
+    const data = req.body
 
     const newAthlete = new Athlete(data)
     newAthlete
         .save()
         .then(function(athlete){
-            res.send()
+            res.send(athlete)
         }) 
         .catch(next)
    
 }
-
 
 exports.update = function(req, res, next){
     if(!req.athlete) return res.sendStatus(404)
@@ -62,7 +60,7 @@ exports.update = function(req, res, next){
         .set(data)
         .save()
         .then(function (athlete){
-            res.send({})
+            res.send(athlete)
         })
         .catch(next)
 }
@@ -76,4 +74,5 @@ exports.delete = function(req, res, next){
         .then(function(){
             res.sendStatus(200)
         })
-        .catch(next)}
+        .catch(next)
+}

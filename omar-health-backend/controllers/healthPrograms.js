@@ -1,12 +1,12 @@
 'use strict'
 
-const HealthProgram = require('app/models/HealthProgram')
+const HealthProgram = require('app/models/healthProgram')
 
 exports.healthProgramId = function(req, res, next, param){
     HealthProgram
-        .findById(parm)
+        .findById(param)
         .then(function(healthProgram) {
-            re.healthProgram = healthProgram
+            req.healthProgram = healthProgram
             next()
         })
         .catch(next)
@@ -40,13 +40,13 @@ exports.list = function(req, res, next){
 
 
 exports.new = function(req, res, next){
-    const date = req.body
+    const data = req.body
 
     const newHealthProgram = new HealthProgram(data)
     newHealthProgram
         .save()
         .then(function(healthProgram){
-            res.send()
+            res.send(healthProgram)
         }) 
         .catch(next)
    
@@ -62,7 +62,7 @@ exports.update = function(req, res, next){
         .set(data)
         .save()
         .then(function (healthProgram){
-            res.send({})
+            res.send(healthProgram)
         })
         .catch(next)
 }
