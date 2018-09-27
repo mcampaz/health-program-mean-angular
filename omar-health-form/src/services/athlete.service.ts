@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import config from '../config';
-import {HttpClientModule, HttpHeaders, HttpClient, HttpParams, HttpErrorResponse   } from "@angular/common/http";
+import { HttpHeaders, HttpClient, HttpErrorResponse   } from "@angular/common/http";
 import { Observable, throwError as observableThrowError } from  'rxjs';
 import { catchError, tap } from  'rxjs/operators';
 import { IAthlete, Athlete } from '../models/athlete';
@@ -9,9 +9,9 @@ import { IAthlete, Athlete } from '../models/athlete';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type': 'application/json'
+    'Content-Type':  'application/json'
   })
-}
+};
 
 @Injectable({
   providedIn: 'root'
@@ -29,10 +29,10 @@ export class AthleteService {
       .get<IAthlete[]>(this._url)
       .pipe(tap(res => JSON.stringify(res)), catchError(this.errorHandler));
   }
-  newAthlete(athlete: Athlete){
+  newAthlete(athlete: Athlete):Observable<Athlete>{
     debugger;
     return this.http
-      .post<any>(this._url, athlete)
+      .post<Athlete>(this._url, athlete, httpOptions )
       .pipe(catchError(this.errorHandler));
   }
   /*getAthlete(id){

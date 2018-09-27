@@ -35,7 +35,8 @@ export class HealthFormComponent implements OnInit {
     this.athlete.officeNumber = form.controls['officeNumber'].value;
     this.athlete.age = form.controls['address'].value;
     this.athlete.gender = form.controls['cellNumber'].value;
-    this._athleteService.newAthlete(this.athlete);
+    this._athleteService.newAthlete(this.athlete)
+      .subscribe(athlete => this.athlete.push(athlete));
     this.router.navigate(['athlete-result']);
   }
 
