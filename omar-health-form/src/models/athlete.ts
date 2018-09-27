@@ -1,23 +1,35 @@
+import {HealthProgram} from "./health-program";
+
+export interface IAthlete {
+
+  firstName: string,
+  lastName: string,
+
+  id?: number,
+  address?: string,
+  cellNumber?: string,
+  officeNumber?: string,
+  email: string,
+  age: number,
+  gender: string,
+  healthProgram: HealthProgram
+
+}
+
 export class Athlete {
-  private _healthProgram = null;
+
   public id?: number;
   public address?: string;
   public cellNumber?: string;
   public officeNumber?: string;
-  public athleteEmail?: string;
+  public healthProgram?: HealthProgram
 
   constructor(
     public firstName: string,
     public lastName: string,
-    public athleteAge: number,
+    public email: string,
+    public age: number,
     public gender: string
-    ){}
+  ){}
 
-  set healthProgram(value){
-    this._healthProgram = value;
-  }
-
-  get healthProgram(): any {
-    return this._healthProgram;
-  }
 }

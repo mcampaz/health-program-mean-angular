@@ -10,6 +10,7 @@ const RESTRICTED = new Set(['email'])
  */
 
  const AthleteSchema = new Schema({
+     id: Number,
      firstName: {
          type: String,
          required: true

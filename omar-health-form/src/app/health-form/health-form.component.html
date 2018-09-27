@@ -80,7 +80,7 @@
       <input
         type="text"
         placeholder="Enter your email..."
-        required email name="athleteEmail"
+        required email name="email"
         ngModel
         #email="ngModel"
       >
@@ -95,12 +95,12 @@
         type="Number"
         class="col-md-1"
         placeholder="Age..."
-        required name="athleteAge"
+        required name="age"
         ngModel
-        #athleteAge="ngModel"
+        #age="ngModel"
       >
       <span class="hlp-block alert alert-danger"
-            *ngIf="!athleteAge.valid && athleteAge.touched && athleteAge.value>0">
+            *ngIf="!age.valid && age.touched && age.value>0">
         Please, enter a valid age!
       </span>
     </div>
@@ -123,7 +123,6 @@
         </div>
       </div>
     </div>
-
     <div class="athleteInfo form-group col col-md-offset-4">
       <label id="space1" class="col col-md-2 control-label">
       </label>
@@ -135,6 +134,5 @@
         Add Athlete
       </button>
     </div>
-
 </form>
 

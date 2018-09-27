@@ -12,7 +12,7 @@ let api = require('./api')
 
 // Connect to mongo
 mongoose.Promise = Bluebird
-if (!mongoose.connection.db) mongoose.connect(config.get('DB_URI'))
+if (!mongoose.connection.db) mongoose.connect(config.get('DB_URI'), {useNewUrlParser: true})
 let db = mongoose.connection
 db.on('error', console.error.bind(console, 'connection error:'))
 db.once('open', console.error.bind(console, 'connected to mongodb'))
@@ -22,8 +22,9 @@ app.use(cors())
 app.use(bodyParser.json())
 
 
-// app.use(compression())
+app.use(compression())
 
 app.use('/api', api)
 
 module.exports = app
+{ useNewUrlParser: true }

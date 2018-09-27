@@ -10,6 +10,7 @@ const RESTRICTED = new Set(['email'])
  */
 
  const HealthProgramSchema = new Schema({
+     id: Number,
      firstName: {
          type: String,
          required: true
@@ -20,12 +21,12 @@ const RESTRICTED = new Set(['email'])
      }
  })
 
-/* HealthProgramSchema.pre('save', function(next){
+ HealthProgramSchema.pre('save', function(next){
      // Update the timestamp
-     //this.updatedOn = Date.now()
+     this.updatedOn = Date.now()
 
      return next()
- })*/
+ })
 
  // Convert from 'firstName, ladtName' to
  // { firstNam: 1, lastName: 1}
