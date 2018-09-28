@@ -49,4 +49,5 @@ const routes = [
   providers: [AthleteService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

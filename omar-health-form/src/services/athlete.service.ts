@@ -5,8 +5,6 @@ import { Observable, throwError as observableThrowError } from  'rxjs';
 import { catchError, tap } from  'rxjs/operators';
 import { IAthlete, Athlete } from '../models/athlete';
 
-
-
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json'
@@ -19,29 +17,46 @@ const httpOptions = {
 export class AthleteService {
 
   _url = 'http://localhost:3000/api/athletes';
-  constructor(private http: HttpClient) {
 
+  constructor(private http: HttpClient) {
   }
-  getAthletes(){
+
+  newAthlete(athlete: Athlete): Observable<Athlete> {
     debugger;
-    console.log('${config.API_URL}');
+    return this.http
+      .post<Athlete>(this._url, athlete)
+      .pipe(catchError(this.errorHandler));
+  }
+
+  getAthletes() {
     return this.http
       .get<IAthlete[]>(this._url)
       .pipe(tap(res => JSON.stringify(res)), catchError(this.errorHandler));
   }
-  newAthlete(athlete: Athlete):Observable<Athlete>{
-    debugger;
+
+  getAthlete(id: string): Observable<any> {
     return this.http
-      .post<Athlete>(this._url, athlete, httpOptions )
+      .get<Athlete>(this._url + '/${id}', httpOptions)
+      .pipe(tap(res => JSON.stringify(res)), catchError(this.errorHandler));
+  }
+
+  postAthlete(data): Observable<any> {
+    return this.http.post(this._url, data, httpOptions)
       .pipe(catchError(this.errorHandler));
   }
-  /*getAthlete(id){
-    return this.http
-      .get('${config.API_URL}/athletes/${id}')
-      .pipe(res => res.json())
+
+  updateAthlete(data): Observable<any> {
+    return this.http.put(this._url, data, httpOptions)
+      .pipe(catchError(this.errorHandler));
   }
-  */
-  errorHandler(error: HttpErrorResponse){
+
+  deleteAthlete(id: string): Observable<{}> {
+    const url = this._url + '/${id}';
+    return this.http.delete(url, httpOptions)
+      .pipe(catchError(this.errorHandler));
+  }
+
+  errorHandler(error: HttpErrorResponse) {
     return observableThrowError(error.message || "server Error");
   }
 }

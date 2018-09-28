@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Athlete} from "../../models/athlete";
 
 @Component({
   selector: 'app-athlete-result',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AthleteResultComponent implements OnInit {
 
-  constructor() { }
+  constructor(private athlete: Athlete) { }
 
   ngOnInit() {
   }

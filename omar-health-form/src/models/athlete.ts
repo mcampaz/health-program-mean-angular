@@ -5,7 +5,8 @@ export interface IAthlete {
   firstName: string,
   lastName: string,
 
-  id?: number,
+  id?: string,
+  athleteCount?: number,
   address?: string,
   cellNumber?: string,
   officeNumber?: string,
@@ -18,7 +19,8 @@ export interface IAthlete {
 
 export class Athlete {
 
-  public id?: number;
+  public id?: string;
+  public athleteCount?: number;
   public address?: string;
   public cellNumber?: string;
   public officeNumber?: string;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup} from "@angular/forms";
 import { Router } from "@angular/router";
+import {Athlete} from "../../models/athlete";
 
 @Component({
   selector: 'app-survey-form',
@@ -9,7 +10,7 @@ import { Router } from "@angular/router";
 })
 export class SurveyFormComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public athlete: Athlete) { }
 
   createHealthSurvey(healthForm: FormGroup){
     debugger;
@@ -27,6 +28,7 @@ export class SurveyFormComponent implements OnInit {
     }
   }
   ngOnInit() {
+
   }
 
 }
