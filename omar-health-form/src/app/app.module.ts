@@ -16,6 +16,7 @@ import { AthleteResultComponent } from './athlete-result/athlete-result.componen
 import { AthleteListComponent } from './athlete-list/athlete-list.component';
 import { AthleteService } from '../services/athlete.service';
 
+
 const routes = [
     { path: '', component: HealthFormComponent },
     { path: 'athlete-result', component: AthleteResultComponent },
@@ -26,6 +27,8 @@ const routes = [
     { path: 'health-program4', component: HealthProgram4Component },
     { path: 'athlete-list', component: AthleteListComponent }
   ];
+
+var currentAthlete: ContentScriptGlobalScope;
 
 @NgModule({
   declarations: [

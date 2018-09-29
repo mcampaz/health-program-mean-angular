@@ -36,14 +36,7 @@ export class HealthFormComponent implements OnInit {
     this.athlete.healthProgram = [];
 
     this._athleteService.newAthlete(this.athlete)
-      .subscribe(athlete => alert(athlete));
-    this.router.navigate(['athlete-result']);
-  }
-
-  mapFormValues(form: NgForm){
-
-    this._athleteService.newAthlete(this.athlete)
-      .subscribe(athlete => this.athlete.push(athlete));
+      .subscribe(athlete => this.athlete = athlete);
     this.router.navigate(['athlete-result']);
   }
 
